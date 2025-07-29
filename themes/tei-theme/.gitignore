@@ -1,0 +1,30 @@
+# Node modules & build artifacts
+
+node_modules
+dist/output.css.map
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.swp
+
+# BrowserSync cache
+.bs-cache/
+bs-config.js
+
+# WordPress core files (if this is only for theme development)
+wp-admin/
+wp-includes/
+*.log
+
+# Env files
+.env
+.env.*
