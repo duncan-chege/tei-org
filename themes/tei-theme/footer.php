@@ -54,7 +54,7 @@
     </div>
 
     <div class="border-t border-white/30 mt-4 py-4 text-center text-gray-400 text-sm">
-        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | Made by <a href="https://visualsnare.com/" target="_blank">Visualsnare</a> </p>
+        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | <a class="hover:text-white" href="https://visualsnare.com/" target="_blank">Made by Visualsnare</a> </p>
     </div>
 </footer>
 
