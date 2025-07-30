@@ -2,8 +2,8 @@
     <div class="grid grid-cols-1 md:grid-cols-3 lg:gap-8 gap-0 pt-16 lg:px-16 px-8">
         <!-- About section -->
         <div>
-            <img src="<?php echo get_template_directory_uri() . '/src/images/main-white-logo.png' ?>"
-                alt="Give Money">
+            <img class="h-[50px]" src="<?php echo get_image_url('main-white-logo.svg'); ?>"
+                alt="main white logo">
             <p class="text-gray-400 my-4"><?php bloginfo('description'); ?></p>
 
             <!-- Social links (you can customize these) -->

@@ -3,11 +3,11 @@
 <!-- Hero Section -->
 <section id="home" class="relative pt-8 lg:pt-16 pb-8 lg:pb-16">
     <div class="max-w-[1440px] mx-auto px-4 lg:px-0 text-center">
-        <h1 class="text-navy-blue font-bold text-3xl lg:text-[64px] leading-tight lg:leading-[64px] mb-4 lg:mb-8">
+        <h1 class="text-dark font-bold text-3xl lg:text-[64px] leading-tight lg:leading-[64px] mb-4 lg:mb-8">
             Trans Empowerment Initiative (TEI)
         </h1>
 
-        <p class="text-navy-blue text-xl lg:text-[32px] leading-relaxed lg:leading-[32px] max-w-4xl mx-auto px-4">
+        <p class="text-dark text-xl lg:text-[32px] leading-relaxed lg:leading-[32px] max-w-4xl mx-auto px-4">
             Uplifting Trans Masculine Voices. Building Power, Dignity, and Belonging in East Africa.
         </p>
     </div>
@@ -81,8 +81,8 @@
                     <p class="font-medium text-lg lg:text-[20px]">Shelter</p>
                 </div>
                 <div class="space-y-2">
-                    <p class="font-medium text-4xl lg:text-[70px]">150</p>
-                    <p class="font-medium text-lg lg:text-[20px]">Chest Binders</p>
+                    <p class="font-medium text-4xl lg:text-[70px]">100+</p>
+                    <p class="font-medium text-lg lg:text-[20px]">Trans folk supported</p>
                 </div>
                 <div class="space-y-2">
                     <p class="font-medium text-4xl lg:text-[70px]">5</p>
@@ -154,7 +154,7 @@
     <div class="grid sm:gap-3 sm:grid-cols-[1fr_0.1fr_1fr] sm:grid-rows-[0.10fr_1fr]">
         <h2 class="text-maroon tracking-wider uppercase font-semibold px-4 my-2 sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2">Need Shelter</h2>
         <div class="grid gap-3 bg-mustard p-10 sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-3 z-1">
-            <p class="">
+            <p>
                 Are you a transmasculine/gender non-conforming person in Nairobi who urgently needs short-term safe housing?
                 Click the link below to learn about our shelter
             </p>
@@ -193,7 +193,7 @@
                     <div class="absolute bottom-4 left-8 flex items-end">
                         <div class="text-left space-y-4">
                             <!-- Donate Icon -->
-                            <img src="<?php get_image_url('money-icon.svg'); ?>"
+                            <img src="<?php echo get_image_url('money-icon.svg'); ?>"
                                 alt="money icon" />
                             <h3 class=" font-semibold text-white text-xl lg:text-[32px]">
                                 Give Money
@@ -221,7 +221,7 @@
                         <div class="text-left space-y-4">
                             <!-- Donate Icon -->
                             <img src="<?php echo get_image_url('time-icon.svg'); ?>"
-                                alt="money icon" />
+                                alt="time icon" />
                             <h3 class=" font-semibold text-white text-xl lg:text-[32px]">
                                 Give Time
                             </h3>

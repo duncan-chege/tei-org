@@ -25,7 +25,7 @@
             <!-- Logo/Site Title -->
             <div class="flex items-center">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php echo get_image_url('main-logo.png'); ?>" alt="<?php bloginfo('name'); ?>" />
+                    <img class="w-full h-[50px]" src="<?php echo get_image_url('main-logo.svg'); ?>" alt="<?php bloginfo('name'); ?>" />
                 </a>
             </div>
 
