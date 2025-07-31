@@ -3,11 +3,11 @@
 <!-- Hero Section -->
 <section id="home" class="relative pt-8 lg:pt-16 pb-8 lg:pb-16">
     <div class="max-w-[1440px] mx-auto px-4 lg:px-0 text-center">
-        <h1 class="text-dark font-bold text-3xl lg:text-[64px] leading-tight lg:leading-[64px] mb-4 lg:mb-8">
+        <h1 class="text-navy-blue font-bold text-3xl lg:text-[64px] leading-tight lg:leading-[64px] mb-4 lg:mb-8">
             Trans Empowerment Initiative (TEI)
         </h1>
 
-        <p class="text-dark text-xl lg:text-[32px] leading-relaxed lg:leading-[32px] max-w-4xl mx-auto px-4">
+        <p class="text-navy-blue text-xl lg:text-[32px] leading-relaxed lg:leading-[32px] max-w-4xl mx-auto px-4">
             Uplifting Trans Masculine Voices. Building Power, Dignity, and Belonging in East Africa.
         </p>
     </div>
@@ -203,7 +203,7 @@
                 </div>
                 <div class="mt-4 space-y-3">
                     <p class=" text-dark leading-normal">
-                        Invest in the trans-masculine community. Your cash will aid our projects
+                        Support the trans-masculine community. Your cash will aid our projects
                     </p>
                     <a href="" class="button bg-maroon mt-2">
                         Donate
