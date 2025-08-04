@@ -3,7 +3,7 @@
 <div class="h-[40vh] xl:h-[70vh] relative">
     <img class="h-full w-full object-cover" src="<?php echo get_image_url('about-hero.jpg'); ?>" alt="about page hero image" />
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full md:w-3/4 xl:w-2/3 text-white text-center px-4">
-        <h1 class="text-7xl font-bold">About Us</h1>
+        <h1 class="text-3xl lg:text-7xl font-bold">About Us</h1>
     </div>
 </div>
 
@@ -28,7 +28,7 @@
 
 <section class="lg:px-12 px-6 mt-12 lg:mt-0">
     <div class="grid sm:gap-3 sm:grid-cols-[1fr_0.1fr_1fr] sm:grid-rows-[0.10fr_1fr]">
-        <div class="grid content-center gap-3 bg-mustard p-10 sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-3 z-1">
+        <div class="grid content-center gap-3 bg-mustard md:p-10 p-6 sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-3 z-1">
             <p>
                 We are a community that understands what it means to survive violence, exclusion, and systemic neglect.
                 Many of our members have been pushed to the edges surviving homelessness, unemployment, internet trolling,
@@ -43,14 +43,14 @@
 </section>
 
 <div class="md:grid md:grid-cols-[1fr_0.5fr_1fr] lg:px-12 px-6 md:my-20 my-8 md:items-center">
-    <div class="md:shadow-md p-8 mission">
+    <div class="md:shadow-md md:p-8 p-6 mission">
         <h3 class="mb-2 text-maroon text-center text-lg tracking-widest font-bold">MISSION</h3>
         <p>To build and strengthen affirming, empowering, and transformative spaces for transmasculine and TGNC communities in East Africa through grassroots organizing, radical care, advocacy, and capacity building while advancing our collective journey toward liberation.</p>
     </div>
     <div class="w-full h-full overflow-hidden mx-auto">
         <img class="h-full object-cover" src="<?php echo get_image_url('mission-vision-img.jpg'); ?>" alt="">
     </div>
-    <div class="md:shadow-md p-8 vision">
+    <div class="md:shadow-md md:p-8 p-6 vision">
         <h3 class="mb-2 text-maroon text-center text-lg tracking-widest font-bold">VISION</h3>
         <p>A just and liberated East Africa where trans men, transmasculine, and gender non-conforming people live with dignity, safety, and full access to health, housing, education, and economic opportunity free from violence, stigma, and systemic oppression.</p>
     </div>

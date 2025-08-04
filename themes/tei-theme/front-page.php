@@ -2,7 +2,7 @@
 
 <!-- Hero Section -->
 <section id="home" class="relative pt-8 lg:pt-16 pb-8 lg:pb-16">
-    <div class="max-w-[1440px] mx-auto px-4 lg:px-0 text-center">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-0 text-center">
         <h1 class="text-navy-blue font-bold text-3xl lg:text-7xl leading-tight lg:leading-[64px] mb-4 lg:mb-8">
             Trans Empowerment Initiative (TEI)
         </h1>
@@ -28,13 +28,13 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
         <!-- Left Content -->
         <div class="space-y-6 my-8 lg:my-0">
-            <p class="font-bold text-maroon text-lg tracking-widest">
+            <h2 class="font-bold text-maroon text-lg tracking-widest">
                 ABOUT US
-            </p>
-
-            <h2 class=" font-medium text-dark text-xl lg:text-[40px] leading-tight">
-                We Support Trans Men, Transmasculine, and Gender Non-conforming (TGNC) Folks
             </h2>
+
+            <p class="font-medium text-dark text-xl lg:text-[40px] leading-tight">
+                We Support Trans Men, Transmasculine, and Gender Non-conforming (TGNC) Folks
+            </p>
         </div>
 
         <!-- Right Content -->
@@ -49,12 +49,12 @@
                     We work across East Africa to empower and support trans men, transmasculine, and gender non-conforming (TGNC) folks especially those who are refugees, asylum seekers, internally displaced, undocumented, and facing extreme marginalization.
                 </p>
 
-                <div class="pt-4">
-                    <p class="font-medium text-maroon cursor-pointer">
+                <a href="<?php echo site_url('/about'); ?>" class="pt-4">
+                    <span class="font-medium text-maroon cursor-pointer">
                         LEARN MORE
-                    </p>
+                    </span>
                     <div class="bg-maroon h-[2px] w-[100px] mt-1"></div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -64,14 +64,14 @@
 <section class="relative lg:px-12 px-6 mt-8 lg:mt-0">
     <div class="grid lg:grid-cols-2 grid-cols-1">
         <img class="w-full lg:h-[500px] h-[300px] object-cover" src="<?php echo get_image_url('group-session.jpg'); ?>" alt="group meeting">
-        <div class="relative lg:h-full h-[300px]">
+        <div class="relative lg:h-full lg:py-20 py-5">
             <div class="absolute inset-0 bg-mustard z-0"></div>
             <img
                 class="absolute inset-0 w-full h-full object-cover opacity-60 z-10"
                 src="<?php echo get_image_url('map-bg.png'); ?>"
                 alt="map background" />
             <!-- text content on top -->
-            <div class="relative z-20 grid grid-cols-2 gap-16 lg:py-20 py-5 text-center text-dark">
+            <div class="relative z-20 grid grid-cols-2 gap-16 text-center text-dark">
                 <div class="space-y-2">
                     <p class="font-medium text-4xl lg:text-[70px]">300</p>
                     <p class="font-medium text-lg lg:text-[20px]">Chest Binders</p>
@@ -95,17 +95,17 @@
 
 <!-- Latest Projects Section -->
 <section id="projects" class="py-12 lg:py-24">
-    <div class="mx-auto px-4 lg:px-0">
+    <div class="mx-auto px-6 lg:px-0">
         <div class="text-center mb-12">
-            <p class="font-medium text-maroon text-xl tracking-widest mb-4">
+            <h2 class="font-bold text-maroon text-lg tracking-widest">
                 EXPLORE
-            </p>
-            <h2 class="font-semibold text-dark text-2xl lg:text-[32px] tracking-[3.2px] uppercase">
-                LATEST PROJECTS
             </h2>
+            <h3 class="mt-6 font-semibold text-dark text-2xl tracking-widest uppercase">
+                LATEST PROJECTS
+            </h3>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:px-12 px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:px-12">
             <?php
             $project_query = new WP_Query(array(
                 'post_type'      => 'project',

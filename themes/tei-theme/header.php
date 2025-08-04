@@ -30,12 +30,12 @@
             </div>
 
             <div class="lg:hidden block">
-                <a href="#" class="button bg-maroon !py-1.5">Donate</a>
+                <a href="#" class="button bg-maroon py-1">Donate</a>
             </div>
 
             <!-- Mobile menu button (visible below lg) -->
             <button class="lg:hidden p-2" id="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
-                <svg class="w-6 h-6" fill="none" stroke="#232323" viewBox="0 0 24 24">
+                <svg class="w-6 h-6" fill="none" stroke="#a51f53" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
