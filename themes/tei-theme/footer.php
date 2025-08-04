@@ -1,5 +1,5 @@
 <footer class="bg-dark text-white">
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:gap-8 gap-0 pt-16 lg:px-16 px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:gap-8 gap-6 pt-16 lg:px-16 px-8">
         <!-- About section -->
         <div>
             <img class="h-[50px]" src="<?php echo get_image_url('main-white-logo.svg'); ?>"

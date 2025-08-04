@@ -9,10 +9,12 @@
   --color-pink: #ffcade;
   --color-light-blue: #b4d8ed;
   --color-grey: #6B6B6B;
+
+   --tracking-widest: 0.3em;
 }
 
 html {
-  font-size: 18px !important;
+  font-size: 18.5px !important;
 }
 
 body {

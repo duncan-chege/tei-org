@@ -3,7 +3,7 @@
 <!-- Hero Section -->
 <section id="home" class="relative pt-8 lg:pt-16 pb-8 lg:pb-16">
     <div class="max-w-[1440px] mx-auto px-4 lg:px-0 text-center">
-        <h1 class="text-navy-blue font-bold text-3xl lg:text-[64px] leading-tight lg:leading-[64px] mb-4 lg:mb-8">
+        <h1 class="text-navy-blue font-bold text-3xl lg:text-7xl leading-tight lg:leading-[64px] mb-4 lg:mb-8">
             Trans Empowerment Initiative (TEI)
         </h1>
 
@@ -28,7 +28,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
         <!-- Left Content -->
         <div class="space-y-6 my-8 lg:my-0">
-            <p class="font-medium text-maroon text-lg tracking-widest">
+            <p class="font-bold text-maroon text-lg tracking-widest">
                 ABOUT US
             </p>
 
@@ -152,7 +152,7 @@
 <!-- Need Shelter Section -->
 <section id="housing" class="relative lg:px-12 px-6">
     <div class="grid sm:gap-3 sm:grid-cols-[1fr_0.1fr_1fr] sm:grid-rows-[0.10fr_1fr]">
-        <h2 class="text-maroon tracking-wider uppercase font-semibold px-4 my-2 sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2">Need Shelter</h2>
+        <h2 class="text-maroon tracking-widest font-bold px-4 my-2 sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2">NEED SHELTER</h2>
         <div class="grid gap-3 bg-mustard p-10 sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-3 z-1">
             <p>
                 Are you a transmasculine/gender non-conforming person in Nairobi who urgently needs short-term safe housing?
@@ -172,10 +172,10 @@
 
 
 <!-- Get Involved Section -->
-<section id="involved" class="mt-16 py-8 lg:py-16 bg-navy-blue/5">
+<section id="involved" class="mt-16 py-8 lg:py-16 bg-navy-blue/10">
     <div class="lg:w-3/4 w-full mx-auto lg:px-0 px-8">
         <div class="text-center mb-12">
-            <h2 class="font-medium text-maroon text-xl tracking-widest mb-4">
+            <h2 class="font-bold text-maroon text-xl tracking-widest mb-4">
                 GET INVOLVED
             </h2>
             <p class="text-dark text-lg max-w-2xl mx-auto">
