@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 <!-- Hero Section -->
-<section id="home" class="relative pt-8 lg:pt-16 pb-8 lg:pb-16">
-    <div class="max-w-[1440px] mx-auto px-6 lg:px-0 text-center">
+<section id="hero" class="relative pt-8 lg:pt-16 pb-8 lg:pb-16">
+    <div class="mx-auto px-6 lg:px-0 text-center">
         <h1 class="text-navy-blue font-bold text-3xl lg:text-7xl leading-tight lg:leading-[64px] mb-4 lg:mb-8">
             Trans Empowerment Initiative (TEI)
         </h1>

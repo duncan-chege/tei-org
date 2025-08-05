@@ -1,11 +1,15 @@
 <?php get_header(); ?>
 
-<div class="h-[40vh] xl:h-[70vh] relative">
-    <img class="h-full w-full object-cover" src="<?php echo get_image_url('about-hero.jpg'); ?>" alt="about page hero image" />
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full md:w-3/4 xl:w-2/3 text-white text-center px-4">
-        <h1 class="text-3xl lg:text-7xl font-bold">About Us</h1>
+<!-- Hero Section -->
+<section id="hero">
+    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-6 lg:px-0">
+        <h1 class="text-navy-blue font-bold text-3xl lg:text-7xl leading-tight lg:leading-[64px] mb-4 lg:mb-8">
+            About Us
+        </h1>
     </div>
-</div>
+
+    <div class="bg-fixed bg-cover bg-top h-[400px]" style="background-image: url('<?php echo get_image_url('about-hero.jpg'); ?>');"></div>
+</section>
 
 <section class="lg:px-12 px-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-0 lg:my-16 items-center">
