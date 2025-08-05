@@ -3,13 +3,13 @@
 <!-- Hero Section -->
 <section id="hero" class="relative pt-8 lg:pt-16 pb-8 lg:pb-16">
     <div class="mx-auto px-6 lg:px-0 text-center">
-        <h1 class="text-navy-blue font-bold text-3xl lg:text-7xl leading-tight lg:leading-[64px] mb-4 lg:mb-8">
+        <h1>
             Trans Empowerment Initiative (TEI)
         </h1>
 
-        <p class="text-navy-blue text-xl lg:text-[32px] leading-relaxed lg:leading-[32px] max-w-4xl mx-auto px-4">
+        <h2 class="text-navy-blue mx-auto px-4">
             Uplifting Trans Masculine Voices. Building Power, Dignity, and Belonging in East Africa.
-        </p>
+        </h2>
     </div>
 </section>
 
@@ -25,27 +25,27 @@
 
 <!-- About Section -->
 <section id="about" class="lg:px-12 px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
         <!-- Left Content -->
         <div class="space-y-6 my-8 lg:my-0">
-            <h2 class="font-bold text-maroon text-lg tracking-widest">
+            <h5 class="text-maroon">
                 ABOUT US
-            </h2>
+            </h5>
 
-            <p class="font-medium text-dark text-xl lg:text-[40px] leading-tight">
+            <h2 class="text-dark">
                 We Support Trans Men, Transmasculine, and Gender Non-conforming (TGNC) Folks
-            </p>
+            </h2>
         </div>
 
         <!-- Right Content -->
         <div class="bg-pink p-6 lg:p-16 relative overflow-hidden">
 
             <div class="relative space-y-6">
-                <h3 class=" font-medium text-dark text-xl lg:text-[24px] leading-normal">
+                <h3 class="text-dark">
                     Trans Empowerment Initiative (TEI) is a queer and trans youth-led collective and registered Community-Based Organization (CBO) based in Kenya, operating since 2019
                 </h3>
 
-                <p class=" text-dark text-base lg:text-base leading-normal">
+                <p class="text-base lg:text-base leading-normal">
                     We work across East Africa to empower and support trans men, transmasculine, and gender non-conforming (TGNC) folks especially those who are refugees, asylum seekers, internally displaced, undocumented, and facing extreme marginalization.
                 </p>
 
@@ -97,12 +97,12 @@
 <section id="projects" class="py-12 lg:py-24">
     <div class="mx-auto px-6 lg:px-0">
         <div class="text-center mb-12">
-            <h2 class="font-bold text-maroon text-lg tracking-widest">
+            <h5 class="text-maroon">
                 EXPLORE
-            </h2>
-            <h3 class="mt-6 font-semibold text-dark text-2xl tracking-widest uppercase">
-                LATEST PROJECTS
-            </h3>
+                </h2>
+                <h3 class="mt-6 tracking-widest text-dark">
+                    LATEST PROJECTS
+                </h3>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:px-12">
@@ -126,10 +126,10 @@
                             ?>
                         </div>
                         <a href="<?php the_permalink(); ?>" class="group">
-                            <h3 class="font-medium text-maroon group-hover:text-navy-blue text-xl leading-normal">
+                            <h4 class="text-maroon group-hover:text-navy-blue">
                                 <?php the_title(); ?>
-                            </h3>
-                            <p class="font-medium text-grey group-hover:text-navy-blue cursor-pointer">
+                            </h4>
+                            <p class="font-medium text-grey! group-hover:text-navy-blue cursor-pointer">
                                 Read More →
                             </p>
                         </a>
@@ -152,9 +152,9 @@
 <!-- Need Shelter Section -->
 <section id="housing" class="relative lg:px-12 px-6">
     <div class="grid sm:gap-3 sm:grid-cols-[1fr_0.1fr_1fr] sm:grid-rows-[0.10fr_1fr]">
-        <h2 class="text-maroon tracking-widest font-bold px-4 my-2 sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2">NEED SHELTER</h2>
+        <h5 class="text-maroon px-4 my-2 sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2">NEED SHELTER</h5>
         <div class="grid gap-3 bg-mustard p-10 sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-3 z-1">
-            <p>
+            <p class="text-lg">
                 Are you a transmasculine/gender non-conforming person in Nairobi who urgently needs short-term safe housing?
                 Click the link below to learn about our shelter
             </p>
@@ -175,9 +175,9 @@
 <section id="involved" class="mt-16 py-8 lg:py-16 bg-navy-blue/10">
     <div class="lg:w-3/4 w-full mx-auto lg:px-0 px-8">
         <div class="text-center mb-12">
-            <h2 class="font-bold text-maroon text-xl tracking-widest mb-4">
+            <h3 class="text-maroon mb-4 tracking-wider">
                 GET INVOLVED
-            </h2>
+            </h3>
             <p class="text-dark text-lg max-w-2xl mx-auto">
                 Help us support our organization either as a volunteer or fundraising for our various projects
             </p>
