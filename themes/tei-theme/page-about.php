@@ -8,7 +8,7 @@
         </h1>
     </div>
 
-    <div class="bg-fixed bg-cover bg-top h-[400px]" style="background-image: url('<?php echo get_image_url('about-hero.jpg'); ?>');"></div>
+    <div class="bg-fixed bg-cover bg-top h-[300px] lg:h-[400px]" style="background-image: url('<?php echo get_image_url('about-hero.jpg'); ?>');"></div>
 </section>
 
 <section class="lg:px-12 px-6">
@@ -51,8 +51,8 @@
         <h3 class="mb-2 text-maroon text-center text-lg tracking-widest font-bold">MISSION</h3>
         <p>To build and strengthen affirming, empowering, and transformative spaces for transmasculine and TGNC communities in East Africa through grassroots organizing, radical care, advocacy, and capacity building while advancing our collective journey toward liberation.</p>
     </div>
-    <div class="w-full h-full overflow-hidden mx-auto">
-        <img class="h-full object-cover" src="<?php echo get_image_url('mission-vision-img.jpg'); ?>" alt="">
+    <div class="h-full overflow-hidden mx-auto">
+        <img class="md:h-full w-full h-[300px] object-cover" src="<?php echo get_image_url('mission-vision-img.jpg'); ?>" alt="">
     </div>
     <div class="md:shadow-md md:p-8 p-6 vision">
         <h3 class="mb-2 text-maroon text-center text-lg tracking-widest font-bold">VISION</h3>
