@@ -12,19 +12,49 @@
 </section>
 
 <section class="lg:px-12 px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-0 lg:my-16 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-0 lg:my-16 my-6 items-center">
         <div class="space-y-6 my-8 lg:my-0">
             <h5 class="text-maroon">
                 OUR SAFE HOUSE
             </h5>
 
             <p>
-                Our safehouse in Nairobi provides a temporary shelter where transmasculine/gender non-conforming individuals can live free from violence, experience autonomy, and fully express their identities.
+                Our safehouse in Nairobi provides a temporary shelter where transmasculine/gender non-conforming
+                individuals can live free from violence, experience autonomy, and fully express their identities.
             </p>
+
+            <p>TEI is dedicated to providing a harassment-free physical and digital experience for everyone.
+                We do not tolerate harassment of coordinators or residents in any form, and we will promptly
+                remove anyone who does so. If you are being harassed, notice that someone else is being harassed,
+                or have any other concerns, please contact us:</p>
         </div>
 
-        <img class="w-full lg:h-[500px] h-[300px] object-cover object-top" src="<?php echo get_image_url('our-story-bg.jpg'); ?>" alt="our story image" />
+        <img class="w-full lg:h-auto h-[300px] object-cover object-top" src="<?php echo get_image_url('safe-house-bg.jpg'); ?>" alt="our story image" />
     </div>
 </section>
+
+<div class="lg:px-12 px-6">
+    <h3 class="text-maroon mb-4">
+        Fill in the form below if you need short term housing
+    </h3>
+    <div class="lg:w-1/2 w-full">
+        <p class="my-4">Trans Empowerment Initiative is a collective of queer and trans youth mobilising to address our right to
+            political education, health, wellness and housing in order to mitigate the challenges that leave us
+            vulnerable to systemic oppression.</p>
+        <p class="my-4">Our Nairobi-based safehouse provides a temporary shelter where trans/gender non-conforming individuals can live free from violence, experience
+            autonomy and fully express their identities.</p>
+        <p class="my-4">If you are in need of emergency housing, please submit this form and we will respond to your request
+            within 24 hours. </p>
+        <p class="font-bold">Please note :</p>
+        <ul class="list-disc mt-4 mb-6">
+            <li>The information provided is confidential and will only be accessed by the TEI Staff.</li>
+            <li>The maximum housing period is 3 months</li>
+            <li>Priority will be given to queer transmasc/trans men/gender non-conforming individuals</li>
+        </ul>
+    </div>
+    <div class="lg:w-1/2 w-full">
+        <?php echo do_shortcode('[forminator_form id="68"]'); ?>
+    </div>
+</div>
 
 <?php get_footer(); ?>
