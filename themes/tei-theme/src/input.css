@@ -66,7 +66,11 @@ p:not(footer p) {
 }
 
 .forminator-button {
-  @apply bg-navy-blue/80! shadow-lg text-white;
+  @apply bg-navy-blue/80! shadow-lg text-white text-sm!;
+}
+
+.forminator-radio-label, .forminator-checkbox-label {
+  @apply text-sm;
 }
 
 /* Custom component classes */
