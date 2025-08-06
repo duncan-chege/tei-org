@@ -11,8 +11,8 @@
     <div class="bg-fixed bg-cover bg-top h-[300px] lg:h-[400px]" style="background-image: url('<?php echo get_image_url('housing-request-hero.jpg'); ?>');"></div>
 </section>
 
-<section class="lg:px-12 px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-0 lg:my-16 my-6 items-center">
+<section class="lg:pr-12 pr-6">
+    <div class="bg-mustard lg:pl-12 pl-6 grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-0 lg:my-16 my-6 items-center">
         <div class="space-y-6 my-8 lg:my-0">
             <h5 class="text-maroon">
                 OUR SAFE HOUSE
