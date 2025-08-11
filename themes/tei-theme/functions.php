@@ -177,14 +177,15 @@ function allow_vite_hmr()
 add_action('wp_head', 'allow_vite_hmr');
 
 //Automatically switching image paths on development and production
-function get_image_url($image_path)
-{
+function get_image_url($image_path) {
     $base_path = get_template_directory_uri();
-
-    // Check for manifest in the correct location (.vite subfolder)
-    if (file_exists(get_template_directory() . '/assets/.vite/manifest.json')) {
-        return $base_path . '/assets/images/' . $image_path;
-    } else {
+    
+    // Check for development flag file
+    $is_development = file_exists(get_template_directory() . '/.dev');
+    
+    if ($is_development) {
         return $base_path . '/src/images/' . $image_path;
+    } else {
+        return $base_path . '/assets/images/' . $image_path;
     }
 }

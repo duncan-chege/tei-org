@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-maroon: #a51f53;
+  --color-navy-blue: #0068be;
+  --color-mustard: #ffc971;
+  --color-dark: #232323;
+  --color-pink: #ffcade;
+  --color-light-blue: #b4d8ed;
+  --color-grey: #6b6b6b;
+
+  --tracking-widest: 0.3em;
+}
+
+html {
+  font-size: 18.5px !important;
+}
+
+body {
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+h1 {
+  @apply text-navy-blue font-bold text-3xl lg:text-7xl leading-tight lg:leading-[64px] mb-4 lg:mb-8;
+}
+
+h2 {
+  @apply lg:text-3xl text-xl font-semibold leading-tight;
+}
+
+h3 {
+  @apply text-xl lg:text-2xl font-semibold leading-normal;
+}
+
+h4 {
+  @apply text-xl font-medium leading-normal;
+}
+
+h5 {
+  @apply font-bold text-lg tracking-widest;
+}
+
+p:not(footer p) {
+  @apply text-dark;
+}
+
+.current-menu-item > a {
+  @apply underline underline-offset-8 text-maroon;
+}
+
+#menu-footer-menu a {
+  @apply hover:text-white;
+}
+
+.forminator-label {
+  @apply text-navy-blue text-sm!;
+}
+
+.forminator-input {
+  @apply border-2! border-navy-blue;
+}
+
+.forminator-error-message {
+  @apply text-[13.5px]!;
+}
+
+.forminator-button {
+  @apply bg-navy-blue/80! shadow-lg text-white text-sm!;
+}
+
+.forminator-radio-label, .forminator-checkbox-label {
+  @apply text-sm;
+}
+
+/* Custom component classes */
+@layer components {
+  .card {
+    @apply bg-white shadow-md rounded-lg p-6;
+  }
+
+  .button {
+    @apply inline-block text-white py-2 px-6 rounded cursor-pointer transition duration-300 ease-in-out hover:scale-110;
+  }
+}

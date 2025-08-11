@@ -7,6 +7,9 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 
+# Prouduction - Development file checker
+.dev
+
 # OS-specific files
 .DS_Store
 Thumbs.db
@@ -28,3 +31,5 @@ wp-includes/
 # Env files
 .env
 .env.*
+
+

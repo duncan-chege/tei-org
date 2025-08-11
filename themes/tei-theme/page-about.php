@@ -8,7 +8,7 @@
         </h1>
     </div>
 
-    <div class="bg-fixed bg-cover bg-top h-[300px] lg:h-[400px]" style="background-image: url('<?php echo get_image_url('about-hero.jpg'); ?>');"></div>
+    <div class="bg-cover bg-top h-[300px] lg:h-[400px]" style="background-image: url('<?php echo get_image_url('about-hero.jpg'); ?>');"></div>
 </section>
 
 <section class="lg:px-12 px-6">

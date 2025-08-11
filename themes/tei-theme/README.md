@@ -78,6 +78,24 @@ npm run build
 
 ---
 
+## Image Asset Management
+
+This theme uses a development flag system to automatically switch between source and built image paths:
+
+**Development Mode:**
+- Create a `.dev` file in the theme root to enable development mode
+- Images are served from `src/images/` folder
+- Use `touch .dev` or `npm run dev` to enable
+
+**Production Mode:**
+- Remove the `.dev` file for production builds
+- Images are served from `assets/images/` folder (Vite built assets)
+- Use `npm run build` to build and automatically switch to production mode
+
+**Usage in templates:**
+```php
+<img src="<?php echo get_image_url('your-image.jpg'); ?>" alt="Description">
+
 ## 🌐 Environment Detection
 
 The theme automatically detects your environment:

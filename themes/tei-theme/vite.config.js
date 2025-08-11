@@ -13,18 +13,18 @@ export default defineConfig({
     tailwindcss(),
     // Custom plugin to copy all images
     {
-      name: 'copy-images',
+      name: "copy-images",
       writeBundle() {
-        const srcImagesDir = resolve(__dirname, 'src/images');
-        const destImagesDir = resolve(__dirname, 'assets/images');
-        
+        const srcImagesDir = resolve(__dirname, "src/images");
+        const destImagesDir = resolve(__dirname, "assets/images");
+
         if (existsSync(srcImagesDir)) {
           if (!existsSync(destImagesDir)) {
             mkdirSync(destImagesDir, { recursive: true });
           }
-          
+
           const files = readdirSync(srcImagesDir);
-          files.forEach(file => {
+          files.forEach((file) => {
             if (file.match(/\.(png|jpe?g|gif|svg|webp|ico)$/i)) {
               copyFileSync(
                 resolve(srcImagesDir, file),
@@ -33,14 +33,17 @@ export default defineConfig({
             }
           });
         }
-      }
-    }
+      },
+    },
   ],
 
   // CSS processing
   css: {
     postcss: {},
   },
+
+  // This makes Vite serve files from src/ as static assets
+  publicDir: "src",
 
   // Build configuration
   build: {
@@ -108,8 +111,8 @@ export default defineConfig({
   // Define path aliases for easier imports
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
-      '@images': resolve(__dirname, 'src/images'),
+      "@": resolve(__dirname, "src"),
+      "@images": resolve(__dirname, "src/images"),
     },
   },
 
