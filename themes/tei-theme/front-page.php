@@ -142,7 +142,7 @@
         </div>
 
         <div class="text-center mt-6">
-            <a href="" class="button bg-maroon">
+            <a href="<?php echo site_url('/projects'); ?>" class="button bg-maroon">
                 All Projects
             </a>
         </div>
@@ -159,9 +159,9 @@
                 Click the link below to learn about our shelter
             </p>
             <div>
-                <button class="button bg-maroon">
+                <a href="<?php echo site_url('/housing-request'); ?>" class="button bg-maroon">
                     Our Shelter
-                </button>
+                </a>
             </div>
         </div>
         <div class="sm:col-start-2 sm:col-end-4 sm:row-start-1 sm:row-end-3 overflow-hidden">

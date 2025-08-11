@@ -11,7 +11,7 @@
     <div class="bg-cover bg-top h-[300px] lg:h-[400px]" style="background-image: url('<?php echo get_image_url('projects-hero.jpg'); ?>');"></div>
 </section>
 
-<div class="lg:px-12 px-6 lg:my-16">
+<div class="lg:px-12 px-6 lg:my-16 my-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:px-12">
         <?php
         $project_query = new WP_Query(array(
