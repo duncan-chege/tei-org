@@ -66,6 +66,7 @@ function get_vite_asset($asset)
 // Enqueue Vite assets
 function tailwind_theme_scripts()
 {
+
     if (is_vite_development()) {
         // Development mode - load Vite dev server
         wp_enqueue_script(
@@ -105,7 +106,7 @@ function tailwind_theme_scripts()
         if (file_exists($js_path)) {
             wp_enqueue_script(
                 'tailwind-main',
-                get_vite_asset('js/main.js'),
+                 get_vite_asset('js/main.js'),
                 array(),
                 filemtime($js_path),
                 true

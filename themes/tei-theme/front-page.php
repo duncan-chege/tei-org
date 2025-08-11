@@ -73,19 +73,19 @@
             <!-- text content on top -->
             <div class="relative z-20 grid grid-cols-2 gap-16 text-center text-dark">
                 <div class="space-y-2">
-                    <p class="font-medium text-4xl lg:text-[70px]">300</p>
+                    <p class="font-medium text-4xl lg:text-[70px]" id="counter-binders">300</p>
                     <p class="font-medium text-lg lg:text-[20px]">Chest Binders</p>
                 </div>
                 <div class="space-y-2">
-                    <p class="font-medium text-4xl lg:text-[70px]">1</p>
+                    <p class="font-medium text-4xl lg:text-[70px]" id="counter-shelter">1</p>
                     <p class="font-medium text-lg lg:text-[20px]">Shelter</p>
                 </div>
                 <div class="space-y-2">
-                    <p class="font-medium text-4xl lg:text-[70px]">100+</p>
+                    <p class="font-medium text-4xl lg:text-[70px]" id="counter-supported">100</p>
                     <p class="font-medium text-lg lg:text-[20px]">Trans folk supported</p>
                 </div>
                 <div class="space-y-2">
-                    <p class="font-medium text-4xl lg:text-[70px]">5</p>
+                    <p class="font-medium text-4xl lg:text-[70px]" id="counter-volunteers">5</p>
                     <p class="font-medium text-lg lg:text-[20px]">Volunteers</p>
                 </div>
             </div>

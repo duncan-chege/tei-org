@@ -1,7 +1,6 @@
 // Main JavaScript entry point for Vite
 import "./input.css";
-
-console.log('Theme loaded');
+import { CountUp } from "countup.js";
 
 // Import your theme JavaScript
 document.addEventListener("DOMContentLoaded", function () {
@@ -36,20 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Add loading state to forms
-  const forms = document.querySelectorAll("form");
-  forms.forEach((form) => {
-    form.addEventListener("submit", function () {
-      const submitBtn = this.querySelector(
-        'input[type="submit"], button[type="submit"]'
-      );
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Loading...";
-      }
-    });
-  });
-
   // Lazy loading for images (if not using WordPress native lazy loading)
   if ("IntersectionObserver" in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -70,47 +55,54 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Utility functions
-window.ThemeUtils = {
-  // Debounce function for performance
-  debounce: function (func, wait, immediate) {
-    let timeout;
-    return function executedFunction() {
-      const context = this;
-      const args = arguments;
-      const later = function () {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      const callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  },
+// CountUp initialization function
+function initCounters() {
+  const counters = [
+    { id: "counter-binders", endVal: 300 },
+    { id: "counter-shelter", endVal: 1 },
+    { id: "counter-supported", endVal: 100 },
+    { id: "counter-volunteers", endVal: 5 },
+  ];
 
-  // Simple fade in animation
-  fadeIn: function (element, duration = 300) {
-    element.style.opacity = "0";
-    element.style.display = "block";
+  // Create intersection observer for animation on scroll
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const counter = counters.find((c) => c.id === entry.target.id);
+          if (counter) {
+            const countUp = new CountUp(counter.id, counter.endVal, {
+              duration: 2.5,
+              separator: ",",
+              suffix: counter.id === "counter-supported" ? "+" : "", // Add + for "100+"
+            });
 
-    const start = performance.now();
+            if (!countUp.error) {
+              countUp.start();
+            }
 
-    function fade(currentTime) {
-      const elapsed = currentTime - start;
-      const progress = elapsed / duration;
-
-      if (progress < 1) {
-        element.style.opacity = progress;
-        requestAnimationFrame(fade);
-      } else {
-        element.style.opacity = "1";
-      }
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    },
+    {
+      threshold: 0.3, // Trigger when 30% visible
+      rootMargin: "0px 0px -50px 0px", // Start animation a bit before fully visible
     }
+  );
 
-    requestAnimationFrame(fade);
-  },
-};
+  // Observe all counter elements
+  counters.forEach((counter) => {
+    const element = document.getElementById(counter.id);
+    if (element) {
+      observer.observe(element);
+    }
+  });
+}
+
+// Initialize when DOM is ready
+document.addEventListener("DOMContentLoaded", initCounters);
 
 // Enable hot reload in development
 if (import.meta.hot) {
