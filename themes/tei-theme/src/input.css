@@ -76,6 +76,10 @@ body {
   @apply text-sm;
 }
 
+.single-body p {
+  margin: 1em 0;
+}
+
 /* Custom component classes */
 @layer components {
   .card {

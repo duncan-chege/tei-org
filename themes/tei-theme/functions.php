@@ -18,6 +18,14 @@ function tailwind_theme_setup()
         'caption',
     ));
 
+    // Add gallery support (ADDED THIS)
+    add_theme_support('align-wide');
+    add_theme_support('responsive-embeds');
+
+    // Add block editor support
+    add_theme_support('wp-block-styles');
+    add_theme_support('editor-styles');
+
     // Register navigation menus
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'tailwind-theme'),
@@ -106,7 +114,7 @@ function tailwind_theme_scripts()
         if (file_exists($js_path)) {
             wp_enqueue_script(
                 'tailwind-main',
-                 get_vite_asset('js/main.js'),
+                get_vite_asset('js/main.js'),
                 array(),
                 filemtime($js_path),
                 true
@@ -115,6 +123,13 @@ function tailwind_theme_scripts()
     }
 }
 add_action('wp_enqueue_scripts', 'tailwind_theme_scripts');
+
+// Load WordPress styles without conflicts
+add_action('wp_enqueue_scripts', function () {
+    // Load WordPress block library styles with high priority
+    wp_enqueue_style('wp-block-library');
+    wp_enqueue_style('wp-block-library-theme');
+}, 5); // Earlier priority than your theme styles
 
 // Add type="module" to Vite scripts
 function add_type_module_to_vite_script($tag, $handle, $src)
@@ -140,7 +155,6 @@ function tailwind_theme_widgets_init()
 }
 add_action('widgets_init', 'tailwind_theme_widgets_init');
 
-
 // Allow Vite HMR in development
 function allow_vite_hmr()
 {
@@ -161,17 +175,31 @@ function allow_vite_hmr()
 }
 add_action('wp_head', 'allow_vite_hmr');
 
+// Remove the complex gallery fix functions - keep it simple
+// Fix gallery block columns issue
+// Simple gallery columns fix - just replace columns-default
+function fix_gallery_block_columns($block_content, $block)
+{
+    if ($block['blockName'] === 'core/gallery' && strpos($block_content, 'columns-default') !== false) {
+        // Get columns from block attributes, default to 3
+        $columns = isset($block['attrs']['columns']) ? $block['attrs']['columns'] : 3;
+        $block_content = str_replace('columns-default', 'columns-' . $columns, $block_content);
+    }
+    return $block_content;
+}
+add_filter('render_block', 'fix_gallery_block_columns', 10, 2);
+
 //Automatically switching image paths on development and production
-function get_image_url($image_path) {
+function get_image_url($image_path)
+{
     $base_path = get_template_directory_uri();
-    
+
     // Check for development flag file
     $is_development = file_exists(get_template_directory() . '/.dev');
-    
+
     if ($is_development) {
         return $base_path . '/src/images/' . $image_path;
     } else {
         return $base_path . '/assets/images/' . $image_path;
     }
 }
-
