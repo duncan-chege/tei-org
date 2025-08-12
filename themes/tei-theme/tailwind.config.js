@@ -9,4 +9,9 @@ export default {
     "./templates/**/*.php",
     "./*.php",
   ],
+  safelist: [
+    {
+      pattern: /^(wp-block.*|align.*|has-.*|gallery.*|wp-element.*)$/,
+    },
+  ],
 };

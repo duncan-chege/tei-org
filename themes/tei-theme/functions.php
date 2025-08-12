@@ -140,21 +140,6 @@ function tailwind_theme_widgets_init()
 }
 add_action('widgets_init', 'tailwind_theme_widgets_init');
 
-// Custom excerpt length
-function tailwind_theme_excerpt_length($length)
-{
-    return 20;
-}
-add_filter('excerpt_length', 'tailwind_theme_excerpt_length', 999);
-
-// Remove WordPress block editor styles (optional)
-function tailwind_theme_remove_block_styles()
-{
-    wp_dequeue_style('wp-block-library');
-    wp_dequeue_style('wp-block-library-theme');
-    wp_dequeue_style('wc-blocks-style');
-}
-add_action('wp_enqueue_scripts', 'tailwind_theme_remove_block_styles', 100);
 
 // Allow Vite HMR in development
 function allow_vite_hmr()
@@ -189,3 +174,4 @@ function get_image_url($image_path) {
         return $base_path . '/assets/images/' . $image_path;
     }
 }
+

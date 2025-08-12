@@ -12,7 +12,7 @@
     </div>
 
     <div class="text-center mt-6">
-        <a href="" class="button bg-maroon">
+        <a href="<?php echo site_url('/projects'); ?>" class="button bg-maroon">
             Back To Projects
         </a>
     </div>
