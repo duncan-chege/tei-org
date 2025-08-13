@@ -7,7 +7,7 @@
 // Theme setup
 function tailwind_theme_setup()
 {
-    // Add theme support
+    // Essential theme support
     add_theme_support('post-thumbnails');
     add_theme_support('title-tag');
     add_theme_support('html5', array(
@@ -18,15 +18,14 @@ function tailwind_theme_setup()
         'caption',
     ));
 
-    // Add gallery support (ADDED THIS)
+    // Block editor support
     add_theme_support('align-wide');
-    add_theme_support('responsive-embeds');
-
-    // Add block editor support
     add_theme_support('wp-block-styles');
     add_theme_support('editor-styles');
+    add_theme_support('responsive-embeds');
 
-    // Register navigation menus
+
+    // Navigation menus
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'tailwind-theme'),
         'footer' => __('Footer Menu', 'tailwind-theme'),
@@ -51,90 +50,41 @@ function is_vite_development()
     return file_exists(get_template_directory() . '/node_modules');
 }
 
-// Get Vite asset URL
-function get_vite_asset($asset)
+// Handle all theme assets
+function tailwind_theme_assets()
 {
-    if (is_vite_development()) {
-        return "http://localhost:3000/{$asset}";
+    $assets_uri = get_template_directory_uri() . '/assets';
+
+    // Front-end assets
+    if (!is_admin()) {
+        if (is_vite_development()) {
+            wp_enqueue_script('vite-client', 'http://localhost:3000/@vite/client', [], null);
+            wp_enqueue_script('tailwind-main', 'http://localhost:3000/src/main.js', ['vite-client'], null, true);
+            add_filter('script_loader_tag', 'add_module_type', 10, 3);
+        } else {
+            wp_enqueue_style('tailwind-style', "$assets_uri/css/style.css");
+            wp_enqueue_script('tailwind-main', "$assets_uri/js/main.js", [], '1.0.0', true);
+        }
+
+        wp_enqueue_style('wp-block-library');
+        wp_enqueue_style('tailwind-blocks', "$assets_uri/css/blocks.css", ['wp-block-library']);
     }
 
-    // In production, read from manifest
-    $manifest_path = get_template_directory() . '/assets/.vite/manifest.json';
-    if (file_exists($manifest_path)) {
-        $manifest = json_decode(file_get_contents($manifest_path), true);
-        if (isset($manifest[$asset])) {
-            return get_template_directory_uri() . '/assets/' . $manifest[$asset]['file'];
-        }
-    }
-
-    // Fallback - direct asset path
-    return get_template_directory_uri() . '/assets/' . $asset;
-}
-
-// Enqueue Vite assets
-function tailwind_theme_scripts()
-{
-
-    if (is_vite_development()) {
-        // Development mode - load Vite dev server
-        wp_enqueue_script(
-            'vite-client',
-            'http://localhost:3000/@vite/client',
-            array(),
-            null,
-            false
-        );
-
-        wp_enqueue_script(
-            'tailwind-main',
-            'http://localhost:3000/src/main.js',
-            array('vite-client'),
-            null,
-            true
-        );
-
-        // Add module type to Vite scripts
-        add_filter('script_loader_tag', 'add_type_module_to_vite_script', 10, 3);
-    } else {
-        // Production mode - load built assets
-
-        // CSS file path - FIXED THE BUG HERE
-        $css_path = get_template_directory() . '/assets/css/style.css';
-        if (file_exists($css_path)) {
-            wp_enqueue_style(
-                'tailwind-style',
-                get_vite_asset('css/style.css'),
-                array(),
-                filemtime($css_path)
-            );
-        }
-
-        // JS file path - FIXED THE BUG HERE  
-        $js_path = get_template_directory() . '/assets/js/main.js';
-        if (file_exists($js_path)) {
-            wp_enqueue_script(
-                'tailwind-main',
-                get_vite_asset('js/main.js'),
-                array(),
-                filemtime($js_path),
-                true
-            );
-        }
+    // Editor assets
+    if (is_admin()) {
+        add_editor_style([
+            "$assets_uri/css/style.css",
+            "$assets_uri/css/blocks.css"
+        ]);
     }
 }
-add_action('wp_enqueue_scripts', 'tailwind_theme_scripts');
+add_action('wp_enqueue_scripts', 'tailwind_theme_assets');
+add_action('admin_init', 'tailwind_theme_assets');
 
-// Load WordPress styles without conflicts
-add_action('wp_enqueue_scripts', function () {
-    // Load WordPress block library styles with high priority
-    wp_enqueue_style('wp-block-library');
-    wp_enqueue_style('wp-block-library-theme');
-}, 5); // Earlier priority than your theme styles
-
-// Add type="module" to Vite scripts
-function add_type_module_to_vite_script($tag, $handle, $src)
+// Add module type for Vite scripts
+function add_module_type($tag, $handle, $src)
 {
-    if (strpos($src, 'localhost:3000') !== false || $handle === 'vite-client' || $handle === 'tailwind-main') {
+    if (strpos($src, 'localhost:3000') !== false) {
         return str_replace('<script ', '<script type="module" ', $tag);
     }
     return $tag;
@@ -146,48 +96,13 @@ function tailwind_theme_widgets_init()
     register_sidebar(array(
         'name'          => __('Sidebar', 'tailwind-theme'),
         'id'            => 'sidebar-1',
-        'description'   => __('Add widgets here.', 'tailwind-theme'),
-        'before_widget' => '<section id="%1$s" class="widget %2$s mb-6">',
+        'before_widget' => '<section class="widget mb-6">',
         'after_widget'  => '</section>',
         'before_title'  => '<h2 class="widget-title text-xl font-bold mb-3">',
         'after_title'   => '</h2>',
     ));
 }
 add_action('widgets_init', 'tailwind_theme_widgets_init');
-
-// Allow Vite HMR in development
-function allow_vite_hmr()
-{
-    if (is_vite_development()) {
-?>
-        <script>
-            // Allow Vite HMR WebSocket connections
-            if (typeof window !== 'undefined') {
-                window.addEventListener('beforeunload', () => {
-                    if (window.__vite_plugin_react_preamble_installed__) {
-                        window.__vite_plugin_react_preamble_installed__ = false;
-                    }
-                });
-            }
-        </script>
-<?php
-    }
-}
-add_action('wp_head', 'allow_vite_hmr');
-
-// Remove the complex gallery fix functions - keep it simple
-// Fix gallery block columns issue
-// Simple gallery columns fix - just replace columns-default
-function fix_gallery_block_columns($block_content, $block)
-{
-    if ($block['blockName'] === 'core/gallery' && strpos($block_content, 'columns-default') !== false) {
-        // Get columns from block attributes, default to 3
-        $columns = isset($block['attrs']['columns']) ? $block['attrs']['columns'] : 3;
-        $block_content = str_replace('columns-default', 'columns-' . $columns, $block_content);
-    }
-    return $block_content;
-}
-add_filter('render_block', 'fix_gallery_block_columns', 10, 2);
 
 //Automatically switching image paths on development and production
 function get_image_url($image_path)

@@ -6,12 +6,8 @@ import { copyFileSync, readdirSync, mkdirSync, existsSync } from "fs";
 
 export default defineConfig({
   plugins: [
-    liveReload([
-      // Watch PHP files for changes
-      "**/*.php",
-    ]),
+    liveReload(["**/*.php"]),
     tailwindcss(),
-    // Custom plugin to copy all images
     {
       name: "copy-images",
       writeBundle() {
@@ -37,70 +33,48 @@ export default defineConfig({
     },
   ],
 
-  // CSS processing
-  css: {
-    postcss: {},
-  },
+  // Explicitly set empty publicDir since we're not using HTML
+  publicDir: false,
 
-  // This makes Vite serve files from src/ as static assets
-  publicDir: "src",
-
-  // Build configuration
   build: {
-    // Output directory relative to project root
     outDir: "assets",
-
-    // Generate manifest for WordPress integration
     manifest: true,
-
+    // Set empty outDir to prevent HTML expectations
     rollupOptions: {
       input: {
-        main: "src/main.js",
-        style: "src/input.css",
+        main: resolve(__dirname, "src/main.js"),
+        style: resolve(__dirname, "src/input.css"),
+        blocks: resolve(__dirname, "src/blocks.css"),
       },
       output: {
-        // Keep original filenames for easier WordPress integration
         entryFileNames: "js/[name].js",
-        chunkFileNames: "js/[name].js",
+        chunkFileNames: "js/[name].[hash].js",
         assetFileNames: (assetInfo) => {
           if (assetInfo.name.endsWith(".css")) {
-            // CSS files go to css/style.css
-            return "css/style[extname]";
+            if (assetInfo.name === "input.css") return "css/style.css";
+            if (assetInfo.name === "blocks.css") return "css/blocks.css";
+            return "css/[name][extname]";
           }
           if (assetInfo.name.match(/\.(png|jpe?g|gif|svg|webp|ico)$/i)) {
-            // Images go to images/ folder
             return "images/[name][extname]";
           }
-          // Other assets (fonts, etc.) go to root of assets folder
           return "[name][extname]";
         },
       },
     },
-
-    // Don't minify in development
     minify: process.env.NODE_ENV === "production",
   },
 
-  // Development server configuration
   server: {
-    // Set custom port
     port: 3000,
-
-    // Enable CORS for WordPress integration
     cors: {
       origin: ["http://localhost", "http://localhost/tei"],
       credentials: true,
     },
-
-    // Hot reload configuration
     hmr: {
       host: "localhost",
     },
-
-    // Don't try to serve a full website - just assets
     middlewareMode: false,
-
-    // Configure headers for CORS
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
@@ -108,7 +82,6 @@ export default defineConfig({
     },
   },
 
-  // Define path aliases for easier imports
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),
@@ -116,7 +89,6 @@ export default defineConfig({
     },
   },
 
-  // Define global constants
   define: {
     "process.env.NODE_ENV": JSON.stringify(
       process.env.NODE_ENV || "development"

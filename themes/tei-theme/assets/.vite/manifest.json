@@ -1,4 +1,14 @@
 {
+  "src/blocks.css": {
+    "file": "css/blocks.css",
+    "src": "src/blocks.css",
+    "isEntry": true
+  },
+  "src/input.css": {
+    "file": "css/style.css",
+    "src": "src/input.css",
+    "isEntry": true
+  },
   "src/main.js": {
     "file": "js/main.js",
     "name": "main",

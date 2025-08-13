@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap");
 @import "tailwindcss";
+@import "./blocks.css";
 
 @theme {
   --color-maroon: #a51f53;
@@ -20,6 +21,7 @@ html {
 body {
   font-family: "Archivo Narrow", sans-serif;
 }
+
 
 @layer base {
   h1 {
@@ -78,6 +80,10 @@ body {
 
 .single-body p {
   margin: 1em 0;
+}
+
+a:where(:not(.wp-element-button)) {
+  text-decoration: none;
 }
 
 /* Custom component classes */
