@@ -39,7 +39,6 @@ export default defineConfig({
   build: {
     outDir: "assets",
     manifest: true,
-    // Set empty outDir to prevent HTML expectations
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src/main.js"),
@@ -75,11 +74,7 @@ export default defineConfig({
       host: "localhost",
     },
     middlewareMode: false,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
-    },
+    // REMOVED the conflicting CSP headers that were blocking iframes
   },
 
   resolve: {

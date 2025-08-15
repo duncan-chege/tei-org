@@ -22,7 +22,6 @@ body {
   font-family: "Archivo Narrow", sans-serif;
 }
 
-
 @layer base {
   h1 {
     @apply text-navy-blue font-bold text-3xl lg:text-7xl leading-tight lg:leading-[64px] mb-4 lg:mb-8;
