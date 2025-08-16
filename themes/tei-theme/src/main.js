@@ -108,3 +108,43 @@ document.addEventListener("DOMContentLoaded", initCounters);
 if (import.meta.hot) {
   import.meta.hot.accept();
 }
+
+// Fallback for YouTube embeds if PHP solution fails
+// Enhanced fallback for project pages
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if we're on a project page
+    const isProjectPage = document.body.classList.contains('post-type-project');
+    
+    // Target both regular content and potential ACF fields
+    const containers = isProjectPage ? [
+        document.querySelector('.entry-content'),
+        document.querySelector('.project-content'),
+        document.querySelector('.acf-field-wysiwyg')
+    ].filter(Boolean) : [document];
+    
+    containers.forEach(container => {
+        const youtubeEmbeds = container.querySelectorAll ? 
+            container.querySelectorAll('.wp-block-embed-youtube .wp-block-embed__wrapper') : [];
+        
+        youtubeEmbeds.forEach(wrapper => {
+            if (wrapper.querySelector('iframe')) return;
+            
+            const url = wrapper.textContent.trim();
+            const videoIdMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([a-zA-Z0-9_-]{11})/);
+            
+            if (videoIdMatch && videoIdMatch[1]) {
+                const iframe = document.createElement('iframe');
+                iframe.setAttribute('loading', 'lazy');
+                iframe.setAttribute('width', '100%');
+                iframe.setAttribute('height', '315');
+                iframe.setAttribute('src', `https://www.youtube.com/embed/${videoIdMatch[1]}?rel=0`);
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allowfullscreen', '');
+                iframe.style.minHeight = '315px';
+                
+                wrapper.innerHTML = '';
+                wrapper.appendChild(iframe);
+            }
+        });
+    });
+});
