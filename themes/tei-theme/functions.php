@@ -105,3 +105,10 @@ function add_module_type($tag, $handle, $src)
 add_action('wp_head', function() {
     echo '<!-- Current time: '.date('Y-m-d H:i:s').' -->';
 });
+
+// Production-only debug
+if (!is_vite_development()) {
+    add_action('wp_footer', function() {
+        echo '<script>console.log("Embed test:", document.querySelectorAll("iframe").length > 0);</script>';
+    });
+}
