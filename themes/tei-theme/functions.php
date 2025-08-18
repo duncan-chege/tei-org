@@ -112,3 +112,26 @@ if (!is_vite_development()) {
         echo '<script>console.log("Embed test:", document.querySelectorAll("iframe").length > 0);</script>';
     });
 }
+
+// Nuclear option for production embeds
+function force_production_embeds($content) {
+    // Only run in production
+    if (!is_vite_development()) {
+        global $wp_embed;
+        
+        // First try normal processing
+        $content = $wp_embed->autoembed($content);
+        
+        // Manual fallback for YouTube
+        $content = preg_replace_callback(
+            '#(https?://(?:www\.)?youtube\.com/watch\?v=([^\s"\']+)|https?://youtu\.be/([^\s"\']+))#',
+            function($matches) {
+                $video_id = $matches[2] ?? $matches[3];
+                return '<div class="wp-embed-youtube"><iframe width="800" height="450" src="https://www.youtube.com/embed/'.$video_id.'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+            },
+            $content
+        );
+    }
+    return $content;
+}
+add_filter('the_content', 'force_production_embeds', 9999);
