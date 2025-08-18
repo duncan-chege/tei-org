@@ -100,3 +100,8 @@ function add_module_type($tag, $handle, $src)
         str_replace('<script ', '<script type="module" ', $tag) :
         $tag;
 }
+
+// Temporary cache buster for testing
+add_action('wp_head', function() {
+    echo '<!-- Current time: '.date('Y-m-d H:i:s').' -->';
+});
