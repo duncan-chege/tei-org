@@ -83,7 +83,6 @@ function get_image_url($image_path)
     }
 }
 
-
 // Helper function for Vite development check
 function is_vite_development()
 {
@@ -100,27 +99,3 @@ function add_module_type($tag, $handle, $src)
         str_replace('<script ', '<script type="module" ', $tag) :
         $tag;
 }
-
-// Temporary cache buster for testing
-add_action('wp_head', function() {
-    echo '<!-- Current time: '.date('Y-m-d H:i:s').' -->';
-});
-
-// Production-only debug
-if (!is_vite_development()) {
-    add_action('wp_footer', function() {
-        echo '<script>console.log("Embed test:", document.querySelectorAll("iframe").length > 0);</script>';
-    });
-}
-
-// Debug oEmbed functionality
-add_action('wp_footer', function() {
-    if (!is_vite_development()) {
-        $test_url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-        $embed_code = wp_oembed_get($test_url);
-        echo '<!-- oEmbed Test: '.($embed_code ? 'WORKING' : 'FAILED').' -->';
-        if (!$embed_code) {
-            echo '<!-- oEmbed Error: '.print_r(wp_get_oembed_response_data($test_url), true).' -->';
-        }
-    }
-});
