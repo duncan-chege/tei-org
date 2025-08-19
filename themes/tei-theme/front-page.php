@@ -65,7 +65,7 @@
     <div class="grid lg:grid-cols-2 grid-cols-1">
         <img class="w-full lg:h-[500px] h-[300px] object-cover" src="<?php echo get_image_url('group-session.jpg'); ?>" alt="group meeting">
         <div class="relative lg:h-full lg:py-20 py-5">
-            <div class="absolute inset-0 bg-mustard z-0"></div>
+            <div class="absolute inset-0 bg-light-blue z-0"></div>
             <img
                 class="absolute inset-0 w-full h-full object-cover opacity-60 z-10"
                 src="<?php echo get_image_url('map-bg.png'); ?>"
@@ -153,7 +153,7 @@
 <section id="housing" class="relative lg:px-12 px-6">
     <div class="grid sm:gap-3 sm:grid-cols-[1fr_0.1fr_1fr] sm:grid-rows-[0.10fr_1fr]">
         <h5 class="text-maroon px-4 my-2 sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2">NEED SHELTER</h5>
-        <div class="grid gap-3 bg-mustard p-10 sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-3 z-1">
+        <div class="grid gap-3 bg-light-blue p-10 sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-3 z-1">
             <p class="text-lg">
                 Are you a transmasculine/gender non-conforming person in Nairobi who urgently needs short-term safe housing?
                 Click the link below to learn about our shelter
