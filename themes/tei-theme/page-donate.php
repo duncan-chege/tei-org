@@ -12,7 +12,7 @@
 </section>
 
 <section class="lg:pr-12">
-    <div class="bg-mustard lg:pl-12 px-6 grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-0 lg:my-16 my-6 items-center">
+    <div class="bg-mustard lg:pl-12 grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-0 lg:my-16 my-6 items-center">
         <div class="space-y-6 my-8 lg:my-0">
             <h5 class="text-maroon">
                 DONOR CALL OUT
