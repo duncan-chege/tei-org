@@ -30,7 +30,7 @@
             </div>
 
             <div class="lg:hidden block">
-                <a href="#" class="button bg-maroon py-1">Donate</a>
+                <a href="<?php echo esc_url(home_url('/donate')); ?>" class="button bg-maroon py-1">Donate</a>
             </div>
 
             <!-- Mobile menu button (visible below lg) -->
@@ -52,7 +52,7 @@
                 ?>
             </div>
             <div class="hidden lg:block">
-                <a href="#" class="button bg-maroon">Donate</a>
+                <a href="<?php echo esc_url(home_url('/donate')); ?>" class="button bg-maroon">Donate</a>
             </div>
         </nav>
 
