@@ -165,7 +165,7 @@
             </div>
         </div>
         <div class="sm:col-start-2 sm:col-end-4 sm:row-start-1 sm:row-end-3 overflow-hidden">
-            <img class="w-auto h-full object-cover" src="<?php echo get_image_url('shelter-lady.jpg'); ?>" alt="">
+            <img class="w-auto h-full object-cover" src="<?php echo get_image_url('shelter-lady.jpg'); ?>" alt="a lady relaxing on grass">
         </div>
     </div>
 </section>

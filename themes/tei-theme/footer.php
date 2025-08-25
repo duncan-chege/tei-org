@@ -42,11 +42,11 @@
             <div class="text-gray-400 space-y-3">
                 <p>Kiserian, Nairobi - Kenya</p>
                 <div class="flex gap-x-2">
-                    <img src="<?php echo get_template_directory_uri() . '/src/images/mail-icon.svg' ?>">
+                    <img src="<?php echo get_template_directory_uri() . '/src/images/mail-icon.svg' ?>" alt="mail icon">
                     <p>info@transempowerment.com</p>
                 </div>
                 <div class="flex gap-x-2">
-                    <img src="<?php echo get_template_directory_uri() . '/src/images/phone-icon.svg' ?>">
+                    <img src="<?php echo get_template_directory_uri() . '/src/images/phone-icon.svg' ?>" alt="phone icon">
                     <p>+254 111 393806</p>
                 </div>
             </div>

@@ -26,7 +26,7 @@
             </p>
         </div>
 
-        <img class="w-full lg:h-[500px] h-[300px] object-cover object-top" src="<?php echo get_image_url('our-story-bg.jpg'); ?>" alt="our story image" />
+        <img class="w-full lg:h-[500px] h-[300px] object-cover object-top" src="<?php echo get_image_url('our-story-bg.jpg'); ?>" alt="our story" />
     </div>
 </section>
 
@@ -41,7 +41,7 @@
             </p>
         </div>
         <div class="sm:col-start-2 sm:col-end-4 sm:row-start-1 sm:row-end-3 overflow-hidden">
-            <img class="w-full h-full object-cover" src="<?php echo get_image_url('community-img.jpg'); ?>" alt="">
+            <img class="w-full h-full object-cover" src="<?php echo get_image_url('community-img.jpg'); ?>" alt="trans masculine community">
         </div>
     </div>
 </section>
@@ -52,7 +52,7 @@
         <p>To build and strengthen affirming, empowering, and transformative spaces for transmasculine and TGNC communities in East Africa through grassroots organizing, radical care, advocacy, and capacity building while advancing our collective journey toward liberation.</p>
     </div>
     <div class="h-full overflow-hidden mx-auto">
-        <img class="md:h-full w-full h-[300px] object-cover" src="<?php echo get_image_url('mission-vision-img.jpg'); ?>" alt="">
+        <img class="md:h-full w-full h-[300px] object-cover" src="<?php echo get_image_url('mission-vision-img.jpg'); ?>" alt="person representing the mission and vision">
     </div>
     <div class="md:shadow-md md:p-8 p-6 vision">
         <h5 class="mb-2 text-maroon text-center">VISION</h5>
@@ -68,14 +68,14 @@
     <div class="lg:w-4/5 mx-auto">
         <div class="grid md:grid-cols-2 grid-cols-1 md:gap-8 md:mb-10 gap-6 mb-6 divide-solid divide-maroon md:divide-x-3">
             <div class="flex items-center gap-4 pr-6">
-                <img class="h-fit" src="<?php echo get_image_url('compassion-icon.svg'); ?>" alt="">
+                <img class="h-fit" src="<?php echo get_image_url('compassion-icon.svg'); ?>" alt="compassion icon">
                 <div class="">
                     <h4 class="text-maroon"> Compassion & Care </h4>
                     <p>We lead with empathy, tending to each individual with curiosity and kindness.</p>
                 </div>
             </div>
             <div class="flex items-center gap-4 lg:pl-6">
-                <img class="h-fit" src="<?php echo get_image_url('community-led-icon.svg'); ?>" alt="">
+                <img class="h-fit" src="<?php echo get_image_url('community-led-icon.svg'); ?>" alt="community led icon">
                 <div class="">
                     <h4 class="text-maroon"> Community Led Solutions </h4>
                     <p>We believe those most affected must be at the forefront of shaping responses to our challenges.</p>
@@ -84,14 +84,14 @@
         </div>
         <div class="grid md:grid-cols-2 grid-cols-1 md:gap-8 md:mb-10 gap-6 mb-6 divide-solid divide-maroon md:divide-x-3">
             <div class="flex items-center gap-4 pr-6">
-                <img class="h-fit" src="<?php echo get_image_url('intersectionality-icon.svg'); ?>" alt="">
+                <img class="h-fit" src="<?php echo get_image_url('intersectionality-icon.svg'); ?>" alt="intersectionality icon">
                 <div class="">
                     <h4 class="text-maroon"> Intersectionality </h4>
                     <p>Our work acknowledges and addresses the multiple layers of oppression our community faces.</p>
                 </div>
             </div>
             <div class="flex items-center gap-4 lg:pl-6">
-                <img class="h-fit" src="<?php echo get_image_url('radical-icon.svg'); ?>" alt="">
+                <img class="h-fit" src="<?php echo get_image_url('radical-icon.svg'); ?>" alt="radical icon">
                 <div class="">
                     <h4 class="text-maroon"> Radical Honesty & Visibility </h4>
                     <p>We tell our truths, document our stories, and affirm our existence unapologetically.</p>
@@ -100,14 +100,14 @@
         </div>
         <div class="grid md:grid-cols-2 grid-cols-1 md:gap-8 md:mb-10 gap-6 mb-6 divide-solid divide-maroon md:divide-x-3">
             <div class="flex items-center gap-4 pr-6">
-                <img class="h-fit" src="<?php echo get_image_url('liberation-icon.svg'); ?>" alt="">
+                <img class="h-fit" src="<?php echo get_image_url('liberation-icon.svg'); ?>" alt="liberation icon">
                 <div class="">
                     <h4 class="text-maroon"> Liberation-Oriented </h4>
                     <p class="tracking-normal">Our work is part of a broader struggle to dismantle all systems of oppression, from transphobia and sexism to colonialism and capitalism.</p>
                 </div>
             </div>
             <div class="flex items-center gap-4 lg:pl-6">
-                <img class="h-fit" src="<?php echo get_image_url('solidarity-icon.svg'); ?>" alt="">
+                <img class="h-fit" src="<?php echo get_image_url('solidarity-icon.svg'); ?>" alt="solidarity icon">
                 <div class="">
                     <h4 class="text-maroon"> Solidarity & Collective Power </h4>
                     <p>We grow stronger through connection, collaboration, and mutual support.</p>

@@ -29,7 +29,7 @@
                 or have any other concerns, please contact us:</p>
         </div>
 
-        <img class="w-full lg:h-auto h-[300px] object-cover object-top" src="<?php echo get_image_url('safe-house-bg.jpg'); ?>" alt="our story image" />
+        <img class="w-full lg:h-auto h-[300px] object-cover object-top" src="<?php echo get_image_url('safe-house-bg.jpg'); ?>" alt="our story" />
     </div>
 </section>
 

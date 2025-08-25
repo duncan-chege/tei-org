@@ -25,7 +25,7 @@
                 raised go directly to supporting our community.</p>
         </div>
 
-        <img class="w-full lg:h-auto h-[300px] object-cover object-top" src="<?php echo get_image_url('donation-call-out.jpg'); ?>" alt="our story image" />
+        <img class="w-full lg:h-auto h-[300px] object-cover object-top" src="<?php echo get_image_url('donation-call-out.jpg'); ?>" alt="a lady posing for a photo" />
     </div>
 </section>
 
