@@ -205,7 +205,7 @@
                     <p class=" text-dark leading-normal">
                         Support the trans-masculine community. Your cash will aid our projects
                     </p>
-                    <a href="" class="button bg-maroon mt-2">
+                    <a href="<?php echo site_url('/donate'); ?>" class="button bg-maroon mt-2">
                         Donate
                     </a>
                 </div>
@@ -232,7 +232,7 @@
                     <p class="text-dark leading-normal">
                         Share your time. Share your talents. Share your love for community.
                     </p>
-                    <a href="" class="button bg-navy-blue mt-2">
+                    <a href="<?php echo site_url('/volunteer'); ?>" class="button bg-navy-blue mt-2">
                         Volunteer
                     </a>
                 </div>
