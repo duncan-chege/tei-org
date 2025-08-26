@@ -8,7 +8,7 @@
         </h1>
 
         <h2 class="text-navy-blue mx-auto px-4">
-            Uplifting Trans Masculine Voices. Building Power, Dignity, and Belonging in East Africa.
+            Celebrating Trans Masculine Voices. Building Power, Dignity, and Belonging in East Africa.
         </h2>
     </div>
 </section>
