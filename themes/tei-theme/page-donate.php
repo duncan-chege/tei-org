@@ -38,10 +38,10 @@
             <p>We call on community support to sustain our trans safehouse in Nairobi by contributinng funds toward the rent, utilities, food,
                 sanitary supplies, and emergency costs of our residents.</p>
         </div>
-        <div class="bg-maroon text-white p-4 text-center">
+        <div class="bg-maroon text-white p-10 text-center">
             <h4>Send your contributions via Mpesa to:</h4>
             <div class="flex text-white gap-x-4 justify-center py-4">
-                <p class="text-white text-xl">Vela</p>
+                <p class="text-white text-xl">Night Okindo</p>
                 <p class="font-bold text-white text-xl">0111393806</p>
             </div>
         </div>

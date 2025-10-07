@@ -196,7 +196,7 @@
                             <img src="<?php echo get_image_url('money-icon.svg'); ?>"
                                 alt="money icon" />
                             <h3 class=" font-semibold text-white text-xl lg:text-[32px]">
-                                Give Money
+                                Help Fund
                             </h3>
                         </div>
                     </div>

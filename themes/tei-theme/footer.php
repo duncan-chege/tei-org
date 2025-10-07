@@ -2,7 +2,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 lg:gap-8 gap-6 pt-16 lg:px-16 px-8">
         <!-- About section -->
         <div>
-            <img class="h-[50px]" src="<?php echo get_image_url('main-white-logo.svg'); ?>"
+            <img class="h-[70px]" src="<?php echo get_image_url('main-logo.png'); ?>"
                 alt="main white logo">
             <p class="text-gray-400 my-4"><?php bloginfo('description'); ?></p>
 

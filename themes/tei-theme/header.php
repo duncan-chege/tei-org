@@ -23,9 +23,9 @@
         <?php endif; ?>
         <nav class="flex items-center justify-between py-2 px-4 md:px-8 gap-x-6">
             <!-- Logo/Site Title -->
-            <div class="flex items-center">
+            <div class="flex justify-center w-60">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <img class="w-full h-[50px]" src="<?php echo get_image_url('main-logo.svg'); ?>" alt="<?php bloginfo('name'); ?>" />
+                    <img class="w-full h-[70px]" src="<?php echo get_image_url('main-logo.png'); ?>" alt="<?php bloginfo('name'); ?>" />
                 </a>
             </div>
 
