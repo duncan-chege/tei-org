@@ -2,7 +2,7 @@
 
 <!-- Hero Section -->
 <section id="hero">
-    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-6 lg:px-0">
+    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-4 lg:px-0">
         <h1 class="text-navy-blue font-bold text-3xl lg:text-7xl leading-tight lg:leading-[64px] mb-4 lg:mb-8">
             Housing Request
         </h1>
@@ -12,7 +12,7 @@
 </section>
 
 <section class="lg:pr-12">
-    <div class="bg-mustard lg:pl-12 px-6 grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-0 lg:my-16 my-6 items-center">
+    <div class="bg-mustard lg:pl-12 px-4 grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-0 lg:my-16 my-6 items-center">
         <div class="space-y-6 my-8 lg:my-0">
             <h5 class="text-maroon">
                 OUR SAFE HOUSE
@@ -33,7 +33,7 @@
     </div>
 </section>
 
-<div class="lg:px-12 px-6">
+<div class="lg:px-12 px-4">
     <h3 class="text-maroon mb-4">
         Fill in the form below if you need short term housing
     </h3>

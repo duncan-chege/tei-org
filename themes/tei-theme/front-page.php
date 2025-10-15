@@ -2,7 +2,7 @@
 
 <!-- Hero Section -->
 <section id="hero" class="relative pt-8 lg:pt-16 pb-8 lg:pb-16">
-    <div class="mx-auto px-6 lg:px-0 text-center">
+    <div class="mx-auto px-4 lg:px-0 text-center">
         <h1>
             Trans Empowerment Initiative (TEI)
         </h1>
@@ -24,7 +24,7 @@
 </section>
 
 <!-- About Section -->
-<section id="about" class="lg:px-12 px-6">
+<section id="about" class="lg:px-12 px-4">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
         <!-- Left Content -->
         <div class="space-y-6 my-8 lg:my-0">
@@ -61,7 +61,7 @@
 </section>
 
 <!-- Statistics Section -->
-<section class="relative lg:px-12 px-6 mt-8 lg:mt-0">
+<section class="relative lg:px-12 px-4 mt-8 lg:mt-0">
     <div class="grid lg:grid-cols-2 grid-cols-1">
         <img class="w-full lg:h-[500px] h-[300px] object-cover" src="<?php echo get_image_url('group-session.jpg'); ?>" alt="group meeting">
         <div class="relative lg:h-full lg:py-20 py-5">
@@ -95,7 +95,7 @@
 
 <!-- Latest Projects Section -->
 <section id="projects" class="py-12 lg:py-24">
-    <div class="mx-auto px-6 lg:px-0">
+    <div class="mx-auto px-4 lg:px-0">
         <div class="text-center mb-12">
             <h5 class="text-maroon">
                 EXPLORE
@@ -150,7 +150,7 @@
 </section>
 
 <!-- Need Shelter Section -->
-<section id="housing" class="relative lg:px-12 px-6">
+<section id="housing" class="relative lg:px-12 px-4">
     <div class="grid sm:gap-3 sm:grid-cols-[1fr_0.1fr_1fr] sm:grid-rows-[0.10fr_1fr]">
         <h5 class="text-maroon px-4 my-2 sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2">NEED SHELTER</h5>
         <div class="grid gap-3 bg-light-blue p-10 sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-3 z-1">

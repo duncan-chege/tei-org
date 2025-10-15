@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section id="hero">
-    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-6 lg:px-0">
+    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-4 lg:px-0">
         <h1>
             Contact Us
         </h1>
@@ -24,14 +24,14 @@
                 <p class="text-xl text-navy-blue">+254 111 393806</p>
             </div>
         </div>
-         <div class="md:text-center">
+        <div class="md:text-center">
             <h3>Email Us</h3>
             <div class="flex gap-x-4 mt-2 md:justify-center">
                 <img class="w-[40px] h-[40px]" src="<?php echo get_image_url('email-icon.svg'); ?>" alt="email icon" />
                 <p class="text-xl text-navy-blue">info@transempowerment.com</p>
             </div>
         </div>
-         <div class="md:text-center">
+        <div class="md:text-center">
             <h3>Visit Us</h3>
             <div class="flex gap-x-4 mt-2 md:justify-center">
                 <img class="w-[40px] h-[40px]" src="<?php echo get_image_url('call-icon.svg'); ?>" alt="location icon" />

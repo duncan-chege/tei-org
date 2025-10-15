@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section id="hero">
-    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-6 lg:px-0">
+    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-4 lg:px-0">
         <h1>
             Become A Volunteer
         </h1>
@@ -12,7 +12,7 @@
 
 <section class="lg:pr-12 pr-6">
     <div class="lg:pl-12 pl-6 grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-0 lg:my-16 my-6">
-        <div class="bg-light-blue text-dark space-y-3 my-8 lg:my-0 lg:py-8 py-4 lg:px-10 px-6">
+        <div class="bg-light-blue text-dark space-y-3 my-8 lg:my-0 lg:py-8 py-4 lg:px-10 px-4">
             <h5 class="text-navy-blue mb-6 mt-2">
                 VOLUNTEER CALL OUT
             </h5>

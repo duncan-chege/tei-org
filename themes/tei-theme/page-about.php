@@ -2,7 +2,7 @@
 
 <!-- Hero Section -->
 <section id="hero">
-    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-6 lg:px-0">
+    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-4 lg:px-0">
         <h1>
             About Us
         </h1>
@@ -11,7 +11,7 @@
     <div class="bg-cover bg-top h-[300px] lg:h-[400px]" style="background-image: url('<?php echo get_image_url('about-hero.jpg'); ?>');"></div>
 </section>
 
-<section class="lg:px-12 px-6">
+<section class="lg:px-12 px-4">
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-0 lg:my-16 items-center">
         <div class="space-y-6 my-8 lg:my-0">
             <h5 class="text-maroon">
@@ -30,7 +30,7 @@
     </div>
 </section>
 
-<section class="lg:px-12 px-6 mt-12 lg:mt-0">
+<section class="lg:px-12 px-4 mt-12 lg:mt-0">
     <div class="grid sm:gap-3 sm:grid-cols-[1fr_0.1fr_1fr] sm:grid-rows-[0.10fr_1fr]">
         <div class="grid content-center gap-3 bg-mustard md:p-10 p-6 sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-3 z-1">
             <p>
@@ -46,7 +46,7 @@
     </div>
 </section>
 
-<div class="md:grid md:grid-cols-[1fr_0.5fr_1fr] lg:px-12 px-6 md:my-20 my-8 md:items-center">
+<div class="md:grid md:grid-cols-[1fr_0.5fr_1fr] lg:px-12 px-4 md:my-20 my-8 md:items-center">
     <div class="md:shadow-md md:p-8 p-6 mission">
         <h5 class="mb-2 text-maroon text-center">MISSION</h5>
         <p>To build and strengthen affirming, empowering, and transformative spaces for transmasculine and TGNC communities in East Africa through grassroots organizing, radical care, advocacy, and capacity building while advancing our collective journey toward liberation.</p>
@@ -60,7 +60,7 @@
     </div>
 </div>
 
-<div class="bg-pink/50 mt-16 py-8 lg:py-16 px-6">
+<div class="bg-pink/50 mt-16 py-8 lg:py-16 px-4">
     <h3 class="text-dark text-center tracking-wider mb-10">
         OUR CORE VALUES
     </h3>

@@ -2,7 +2,7 @@
 
 <!-- Hero Section -->
 <section id="hero">
-    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-6 lg:px-0">
+    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-4 lg:px-0">
         <h1 class="text-navy-blue font-bold text-3xl lg:text-7xl leading-tight lg:leading-[64px] mb-4 lg:mb-8">
             Our Projects
         </h1>
@@ -11,7 +11,7 @@
     <div class="bg-cover bg-top h-[300px] lg:h-[400px]" style="background-image: url('<?php echo get_image_url('projects-hero.jpg'); ?>');"></div>
 </section>
 
-<div class="lg:px-12 px-6 lg:my-16 my-8">
+<div class="lg:px-12 px-4 lg:my-16 my-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:px-12">
         <?php
         $project_query = new WP_Query(array(

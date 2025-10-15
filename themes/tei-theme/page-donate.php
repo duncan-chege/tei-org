@@ -2,7 +2,7 @@
 
 <!-- Hero Section -->
 <section id="hero">
-    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-6 lg:px-0">
+    <div class="mx-auto text-center pt-8 lg:pt-16 pb-8 lg:pb-16 px-4 lg:px-0">
         <h1 class="text-navy-blue font-bold text-3xl lg:text-7xl leading-tight lg:leading-[64px] mb-4 lg:mb-8">
             <?php the_title(); ?>
         </h1>
@@ -29,7 +29,7 @@
     </div>
 </section>
 
-<div class="lg:px-12 px-6 lg:pb-16 pb-8">
+<div class="lg:px-12 px-4 lg:pb-16 pb-8">
     <div class="grid md:grid-cols-2 grid-cols-1 gap-x-8 gap-y-6">
         <div>
             <h4 class="text-maroon pb-8">
