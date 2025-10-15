@@ -33,11 +33,11 @@
     </div>
 </section>
 
-<div class="lg:px-12 px-4">
+<div class="lg:px-12 px-4 xl:w-1/2 w-full mx-auto my-16">
     <h3 class="text-maroon mb-4">
         Fill in the form below if you need short term housing
     </h3>
-    <div class="lg:w-1/2 w-full">
+    <div>
         <p class="my-4">Trans Empowerment Initiative is a collective of queer and trans youth mobilising to address our right to
             political education, health, wellness and housing in order to mitigate the challenges that leave us
             vulnerable to systemic oppression.</p>
@@ -52,7 +52,7 @@
             <li>Priority will be given to queer transmasc/trans men/gender non-conforming individuals</li>
         </ul>
     </div>
-    <div class="lg:w-1/2 w-full">
+    <div>
         <?php echo do_shortcode('[forminator_form id="68"]'); ?>
     </div>
 </div>
