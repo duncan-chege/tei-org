@@ -28,7 +28,7 @@
                             the_post_thumbnail('medium_large', array('class' => 'w-full h-full object-cover'));
                         } else {
                             // fallback image if no featured image set
-                            echo '<img src="https://via.placeholder.com/406x264?text=No+Image" alt="' . esc_attr(get_the_title()) . '" class="w-full h-full object-cover" />';
+                            echo '<img src="' .get_image_url('placeholder-img.jpg'). '" alt="' . esc_attr(get_the_title()) . '" class="w-full lg:h-auto h-[300px] object-cover" />';
                         }
                         ?>
                     </div>
