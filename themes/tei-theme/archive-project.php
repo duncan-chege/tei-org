@@ -36,9 +36,6 @@
                         <h4 class="text-maroon group-hover:text-navy-blue">
                             <?php the_title(); ?>
                         </h4>
-                        <p class="font-medium text-grey! group-hover:text-navy-blue cursor-pointer">
-                            Read More →
-                        </p>
                     </a>
                 </div>
         <?php endwhile;

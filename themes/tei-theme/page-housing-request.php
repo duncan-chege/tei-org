@@ -48,7 +48,7 @@
         <p class="font-bold">Please note :</p>
         <ul class="list-disc mt-4 mb-6">
             <li>The information provided is confidential and will only be accessed by the TEI Staff.</li>
-            <li>The maximum housing period is 3 months</li>
+            <li>The maximum housing period is 2 months</li>
             <li>Priority will be given to queer transmasc/trans men/gender non-conforming individuals</li>
         </ul>
     </div>

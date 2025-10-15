@@ -60,8 +60,8 @@ body {
   @apply text-navy-blue text-sm!;
 }
 
-.forminator-input {
-  @apply border-2! border-navy-blue;
+.forminator-input, .forminator-textarea {
+  @apply border-2! border-navy-blue!;
 }
 
 .forminator-error-message {
