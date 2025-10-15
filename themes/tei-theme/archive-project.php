@@ -28,7 +28,7 @@
                             the_post_thumbnail('medium_large', array('class' => 'w-full h-full object-cover'));
                         } else {
                             // fallback image if no featured image set
-                            echo '<img src="' .get_image_url('placeholder-img.jpg'). '" alt="' . esc_attr(get_the_title()) . '" class="w-full lg:h-auto h-[300px] object-cover" />';
+                            echo '<img src="' . get_image_url('placeholder-img.jpg') . '" alt="' . esc_attr(get_the_title()) . '" class="w-full lg:h-auto h-[300px] object-cover" />';
                         }
                         ?>
                     </div>
@@ -36,9 +36,6 @@
                         <h4 class="text-maroon group-hover:text-navy-blue">
                             <?php the_title(); ?>
                         </h4>
-                        <p class="text-sm text-gray-600! mb-2">
-                            <?php echo wp_trim_words(get_the_content(), 15, '...'); ?>
-                        </p>
                         <p class="font-medium text-grey! group-hover:text-navy-blue cursor-pointer">
                             Read More →
                         </p>
