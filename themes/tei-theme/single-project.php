@@ -5,9 +5,9 @@
 </div>
 
 <div class="py-10 bg-mustard/20 single-body">
-    <?php the_post_thumbnail('full', ['style' => 'height: 400px; width: auto; display: block; margin: 0 auto;']); ?>
+    <?php the_post_thumbnail('full', ['style' => 'height: 400px; width: auto; display: block; margin: 0 auto; object-fit: cover;']); ?>
 
-    <div class="lg:px-40 md:px-20 px-8 py-8">
+    <div class="lg:px-40 md:px-20 px-4 py-8">
         <?php echo get_the_content(); ?>
     </div>
 

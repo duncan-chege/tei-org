@@ -19,23 +19,23 @@
     <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 xl:w-5/6 pl-8 mx-auto text-navy-blue">
         <div class="md:text-center">
             <h3> Call Us</h3>
-            <div class="flex gap-x-4 mt-2 md:justify-center">
+            <div class="flex gap-x-4 mt-2 md:justify-center items-center">
                 <img class="w-[40px] h-[40px]" src="<?php echo get_image_url('call-icon.svg'); ?>" alt="call icon" />
-                <p class="text-xl text-navy-blue">+254 111 393806</p>
+                <p class="md:text-xl text-lg text-navy-blue">+254 111 393806</p>
             </div>
         </div>
         <div class="md:text-center">
             <h3>Email Us</h3>
-            <div class="flex gap-x-4 mt-2 md:justify-center">
+            <div class="flex gap-x-4 mt-2 md:justify-center items-center">
                 <img class="w-[40px] h-[40px]" src="<?php echo get_image_url('email-icon.svg'); ?>" alt="email icon" />
-                <p class="text-xl text-navy-blue">info@transempowerment.com</p>
+                <p class="md:text-xl text-lg text-navy-blue">info@transempowerment.com</p>
             </div>
         </div>
         <div class="md:text-center">
             <h3>Visit Us</h3>
-            <div class="flex gap-x-4 mt-2 md:justify-center">
+            <div class="flex gap-x-4 mt-2 md:justify-center items-center">
                 <img class="w-[40px] h-[40px]" src="<?php echo get_image_url('call-icon.svg'); ?>" alt="location icon" />
-                <p class="text-xl text-navy-blue">Kiserian, Nairobi – Kenya</p>
+                <p class="md:text-xl text-lg text-navy-blue">Kiserian, Nairobi – Kenya</p>
             </div>
         </div>
     </div>
